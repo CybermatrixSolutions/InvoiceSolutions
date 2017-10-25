@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/layout_bg"
+    android:layout_height="match_parent"
+    tools:context="com.cybermatrixsolutions.invoicesolutions.activity.VerifyMobileNumber">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    android:gravity="center"
+    android:id="@+id/mobile_layout"
+    android:layout_marginRight="20dp"
+    android:layout_height="wrap_content">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:fontFamily="sans-serif"
+        android:textColorHint="@color/white_color"
+        android:paddingLeft="8dp"
+        android:textColor="@color/white_color"
+        android:layout_marginTop="15dp"
+        android:hint="Mobile"
+        android:inputType="number"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:id="@+id/et_mobile"
+        android:background="@drawable/rounded_edittext"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="send otp"
+        android:visibility="visible"
+        android:textSize="16sp"
+        android:id="@+id/sendotp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/text_color"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:background="@drawable/buttonbg"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/verifyotp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="sans-serif"
+            android:textColorHint="@color/white_color"
+            android:paddingLeft="8dp"
+            android:textColor="@color/white_color"
+            android:layout_marginTop="15dp"
+            android:hint="OTP"
+            android:inputType="number"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:id="@+id/et_otp"
+            android:background="@drawable/rounded_edittext"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="verify"
+            android:visibility="visible"
+            android:textSize="16sp"
+            android:id="@+id/verify"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/text_color"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:background="@drawable/buttonbg"/>
+    </LinearLayout>
+
+
+</LinearLayout>

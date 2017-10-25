@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context="com.cybermatrixsolutions.invoicesolutions.LoginActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp">
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/splash"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/logo"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingLeft="8dp"
+        android:fontFamily="sans-serif"
+        android:hint="Employee Id"
+        android:textSize="15sp"
+        android:id="@+id/empId"
+        android:gravity="center"
+        android:textColorHint="@color/white_color"
+        android:textColor="@color/white_color"
+        android:background="@drawable/rounded_edittext"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edittext"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:hint="Pin"
+        android:inputType="numberPassword"
+        android:paddingLeft="8dp"
+        android:textColor="@color/white_color"
+        android:textColorHint="@color/white_color"
+        android:textSize="15sp" />
+    <Button
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:text="Login"
+    android:textSize="16sp"
+    android:id="@+id/login"
+    android:layout_marginTop="20dp"
+    android:textColor="@color/text_color"
+    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+    android:background="@drawable/buttonbg"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:visibility="gone"
+        android:id="@+id/forgotPassword"
+        android:fontFamily="sans-serif"
+        android:text="Forgot Password"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorPrimary"/>
+</LinearLayout>
+</LinearLayout>

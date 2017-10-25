@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/layout_bg"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingLeft="8dp"
+            android:hint="Email Id"
+            android:fontFamily="sans-serif"
+            android:textSize="15sp"
+            android:id="@+id/empId"
+            android:inputType="textEmailAddress"
+            android:gravity="center"
+            android:textColorHint="@color/white_color"
+            android:textColor="@color/white_color"
+            android:background="@drawable/rounded_edittext"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:fontFamily="sans-serif"
+            android:layout_height="40dp"
+            android:textColorHint="@color/white_color"
+            android:paddingLeft="8dp"
+            android:textColor="@color/white_color"
+            android:layout_marginTop="15dp"
+            android:hint="Mobile Number"
+            android:inputType="phone"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:id="@+id/phone"
+            android:background="@drawable/rounded_edittext"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="sans-serif"
+            android:textColorHint="@color/white_color"
+            android:paddingLeft="8dp"
+            android:textColor="@color/white_color"
+            android:layout_marginTop="15dp"
+            android:hint="Name"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:id="@+id/vehicle"
+            android:background="@drawable/rounded_edittext"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Update"
+            android:visibility="visible"
+            android:textSize="16sp"
+            android:id="@+id/next"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/text_color"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:background="@drawable/buttonbg"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Change Password"
+            android:visibility="visible"
+            android:textSize="16sp"
+            android:id="@+id/changePassword"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/text_color"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:background="@drawable/buttonbg"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+     >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="invisible"
+    android:id="@+id/main">
+    <LinearLayout
+        android:id="@+id/llSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Company Code :"
+                android:layout_weight="1.5"
+                android:textColor="@color/colorPrimary"
+                android:textIsSelectable="true"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/company_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.0"
+                android:textColor="@color/colorAccent"
+                android:textIsSelectable="true"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Customer Code :"
+                android:layout_weight="1.5"
+                android:textColor="@color/colorPrimary"
+                android:textIsSelectable="true"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/customer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.0"
+                android:textColor="@color/colorAccent"
+                android:textIsSelectable="true"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:minEms="6"
+                android:layout_weight="1.5"
+                android:text="Driver Name :"
+                android:textColor="@color/colorPrimary"
+                android:textIsSelectable="true"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/driver_name"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorAccent"
+                android:textIsSelectable="true"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+             android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:minEms="6"
+                android:layout_weight="1.5"
+                android:text="Credit Limit :"
+                android:textColor="@color/colorPrimary"
+                android:textIsSelectable="true"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/credit_limit"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorAccent"
+                android:textIsSelectable="true"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Vehicle Number :"
+                android:layout_weight="1.5"
+                android:textColor="@color/colorPrimary"
+                android:textIsSelectable="true"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/van_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.0"
+                android:textColor="@color/colorAccent"
+                android:textIsSelectable="true"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/text_color"/>
+
+    </LinearLayout>
+<TextView
+    android:layout_width="match_parent"
+    android:id="@+id/text"
+    android:text="Customer Request"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="5dp"
+    android:textSize="15sp"
+    android:textColor="@color/colorAccent"
+    android:layout_below="@+id/llSearch"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/text_color"/>
+
+    <android.support.v7.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:id="@+id/recyclerView"
+    android:layout_below="@+id/text"
+    android:layout_above="@+id/recyclerView2"
+    android:layout_height="wrap_content">
+
+</android.support.v7.widget.RecyclerView>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recyclerView2"
+        android:layout_below="@+id/text"
+        android:layout_above="@+id/scan_button"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
+    <Button
+        android:id="@+id/scan_button"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/text_color"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:background="@drawable/buttonbg"
+        android:layout_centerHorizontal="true"
+        android:text="scan -qr" />
+    <Button
+        android:id="@+id/scan_barcode"
+        android:layout_width="100sp"
+        android:visibility="gone"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/text_color"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:background="@drawable/buttonbg"
+        android:layout_centerHorizontal="true"
+        android:text="continue" />
+
+</RelativeLayout>

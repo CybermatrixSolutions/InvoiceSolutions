@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+          android:clickable="true">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="49dp"
+           android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             android:orientation="horizontal"
+            android:layout_marginLeft="8dp"
+            android:gravity="center|left">
+            <ImageView
+                android:layout_width="36dp"
+                android:src="@mipmap/profile"
+                android:layout_height="36dp"
+                android:id="@+id/imageView" />
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:textColor="#fff"
+                android:text="My Order"
+                android:fontFamily="sans-serif"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:layout_toRightOf="@+id/imageView"
+                android:layout_toEndOf="@+id/imageView" />
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="23dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="25dp"
+                android:layout_weight=".01"
+                android:layout_centerVertical="true"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:textColor="#fff"
+                android:fontFamily="sans-serif"
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:text="0"
+                android:textAllCaps="false"
+                android:layout_toRightOf="@+id/imageView"
+                android:layout_toEndOf="@+id/imageView" />
+        </LinearLayout>
+    </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2d435a"/>
+    </LinearLayout>
+
+</RelativeLayout>

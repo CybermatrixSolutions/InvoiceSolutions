@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    android:gravity="center"
+    tools:context="com.cybermatrixsolutions.invoicesolutions.activity.DeviceIdMobileNumberActivity">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="190dp"
+      android:layout_marginBottom="10dp"
+      android:gravity="center"
+      android:layout_marginTop="25dp"
+      android:orientation="vertical">
+      <ImageView
+          android:layout_width="140dp"
+          android:layout_height="150dp"
+          android:src="@mipmap/splash"
+          android:id="@+id/logo"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:text="Welcome"
+          android:id="@+id/welcome"
+          android:textColor="@color/white_color"
+          android:textSize="25sp"
+          android:textStyle="bold"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@+id/logo"/>
+  </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="visible"
+            android:id="@+id/senOtpLayout"
+            android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@drawable/rounded_edittext"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_weight="1.7"
+        android:padding="2dp"
+        android:src="@mipmap/call"
+        android:layout_height="match_parent" />
+    <View
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="match_parent"
+        android:background="@color/white_color"
+        android:layout_weight="2.13"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingLeft="20dp"
+        android:fontFamily="sans-serif"
+        android:inputType="number"
+        android:layout_weight="0.5"
+        android:hint="Mobile Number"
+        android:textSize="15sp"
+        android:background="@android:color/transparent"
+        android:id="@+id/et_mobile"
+        android:gravity="start|center_vertical"
+        android:textColorHint="@color/white_color"
+        android:textColor="@color/white_color"
+       />
+
+</LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Submit"
+            android:textSize="16sp"
+            android:id="@+id/sendotp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/text_color"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:background="@drawable/buttonbg"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/verifyOtpLayout"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:paddingLeft="8dp"
+                android:fontFamily="sans-serif"
+                android:hint="Enter OTP"
+                android:textSize="15sp"
+                android:id="@+id/et_otp"
+                android:gravity="center"
+                android:textColorHint="@color/white_color"
+                android:textColor="@color/white_color"
+                android:background="@drawable/rounded_edittext"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Verify"
+                android:textSize="16sp"
+                android:id="@+id/verifyotp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/text_color"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:background="@drawable/buttonbg"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/setPinLayout"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:paddingLeft="8dp"
+                android:fontFamily="sans-serif"
+                android:hint="Enter Pin"
+                android:textSize="15sp"
+                android:id="@+id/et_pin"
+                android:gravity="center"
+                android:textColorHint="@color/white_color"
+                android:textColor="@color/white_color"
+                android:background="@drawable/rounded_edittext"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:paddingLeft="8dp"
+                android:fontFamily="sans-serif"
+                android:hint="Confirm Pin"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:id="@+id/et_cnfmpin"
+                android:gravity="center"
+                android:textColorHint="@color/white_color"
+                android:textColor="@color/white_color"
+                android:background="@drawable/rounded_edittext"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="set pin"
+                android:textSize="16sp"
+                android:id="@+id/setpin"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/text_color"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:background="@drawable/buttonbg"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

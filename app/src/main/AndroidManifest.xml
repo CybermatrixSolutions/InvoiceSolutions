@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cybermatrixsolutions.invoicesolutions">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/splash"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".activity.MachineNumberActivity" />
+        <activity
+            android:name=".activity.DashboardActivity"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activity.CreditCustomerActivity"
+            android:parentActivityName=".activity.DashboardActivity" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation" />
+        <activity
+            android:name=".activity.BarcodeScanActivity"
+            android:parentActivityName=".activity.DashboardActivity" />
+        <activity android:name=".activity.PdfActivity" />
+        <activity
+            android:name=".activity.WalkinCustomerInformationActivity"
+            android:parentActivityName=".activity.DashboardActivity" />
+        <activity android:name=".WebViewActivity" />
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:parentActivityName=".activity.DashboardActivity" />
+        <activity
+            android:name=".activity.ForgotPasswordActivity"
+            android:parentActivityName=".LoginActivity" />
+        <activity android:name=".activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.ChangePasswordActivity" />
+        <activity android:name=".activity.DeviceIdMobileNumberActivity" />
+        <activity android:name=".activity.VerifyMobileNumber"></activity>
+    </application>
+
+</manifest>
