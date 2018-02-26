@@ -6,8 +6,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/bg"
-    tools:context="com.cybermatrixsolutions.invoicesolutions.LoginActivity">
-
+    tools:context="com.cybermatrixsolutions.invoicesolutions.activity.activity.LoginActivity">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,8 +19,9 @@
     <ImageView
         android:layout_width="140dp"
         android:layout_height="150dp"
+        android:contentDescription="@string/description"
         android:layout_marginTop="30dp"
-        android:src="@mipmap/splash"
+        android:src="@drawable/garuda_logo"
         android:layout_gravity="center_horizontal"
         android:id="@+id/logo"/>
 
@@ -29,6 +32,7 @@
         android:fontFamily="sans-serif"
         android:hint="Employee Id"
         android:textSize="15sp"
+        android:visibility="gone"
         android:id="@+id/empId"
         android:gravity="center"
         android:textColorHint="@color/white_color"
@@ -36,7 +40,7 @@
         android:background="@drawable/rounded_edittext"/>
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/et_pin"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="15dp"
@@ -60,13 +64,27 @@
     style="@style/Widget.AppCompat.Button.Borderless.Colored"
     android:background="@drawable/buttonbg"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Change Login"
+        android:textSize="16sp"
+        android:id="@+id/change_login"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/text_color"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:background="@drawable/buttonbg"/>
+
+
+
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:textSize="15sp"
         android:visibility="gone"
-        android:id="@+id/forgotPassword"
         android:fontFamily="sans-serif"
         android:text="Forgot Password"
         android:layout_marginTop="5dp"

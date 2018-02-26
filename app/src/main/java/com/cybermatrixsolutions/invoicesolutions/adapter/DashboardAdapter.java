@@ -58,12 +58,12 @@ public class DashboardAdapter extends BaseAdapter {
         if (convertView == null) {
             grid = new View(mContext);
             grid = inflater.inflate(R.layout.product_layout, null);
-            TextView textView = (TextView) grid.findViewById(R.id.pro_name);
-            ImageView imageView = (ImageView)grid.findViewById(R.id.pro_img);
+            TextView textView = grid.findViewById(R.id.pro_name);
+            ImageView imageView = grid.findViewById(R.id.pro_img);
             textView.setText(web[position]);
             imageView.setImageResource(Imageid[position]);
         } else {
-            grid = (View) convertView;
+            grid = convertView;
         }
         return grid;
     }

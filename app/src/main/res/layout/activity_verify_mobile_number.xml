@@ -4,15 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:background="@color/layout_bg"
     android:layout_height="match_parent"
-    tools:context="com.cybermatrixsolutions.invoicesolutions.activity.VerifyMobileNumber">
+    tools:context="com.cybermatrixsolutions.invoicesolutions.activity.verify_mobile.VerifyMobileNumberActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/title"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:contentDescription="@string/description"
+            android:src="@mipmap/back"
+            android:id="@+id/back"
+            android:layout_marginLeft="5dp"
+            android:padding="11dp"
+            android:layout_height="50dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/splash"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="GARRUDA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
 <LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <LinearLayout
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_marginLeft="20dp"
     android:gravity="center"
+
     android:id="@+id/sendOtp_layout"
     android:layout_marginRight="20dp"
     android:layout_height="wrap_content">
@@ -27,6 +60,7 @@
         android:hint="Mobile"
         android:inputType="number"
         android:gravity="center"
+        android:maxLength="10"
         android:textSize="15sp"
         android:id="@+id/et_mobile"
         android:background="@drawable/rounded_edittext"/>
@@ -35,13 +69,23 @@
         android:layout_height="45dp"
         android:text="send otp"
         android:visibility="visible"
-        android:textSize="16sp"
         android:id="@+id/sendotp"
         android:layout_marginTop="20dp"
         android:textColor="@color/text_color"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:background="@drawable/buttonbg"/>
-</LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="resend otp"
+            android:visibility="gone"
+            android:id="@+id/resendotp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/text_color"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:background="@drawable/buttonbg"/>
+
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
@@ -77,6 +121,40 @@
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:background="@drawable/buttonbg"/>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:id="@+id/invoiceLoayout"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+         android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="generate invoice"
+            android:padding="8dp"
+            android:id="@+id/generatInvoiceButton"
+             android:visibility="gone"
+            android:textSize="16sp"
+            android:textColor="@color/text_color"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:background="@drawable/buttonbg"/>
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="48dp"
+            android:text="print invoice"
+            android:layout_marginTop="10dp"
+             android:visibility="visible"
+            android:id="@+id/printBillButton"
+            android:textSize="16sp"
+            android:textColor="@color/text_color"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:background="@drawable/buttonbg"/>
+    </LinearLayout>
 
+</LinearLayout>
 
 </LinearLayout>

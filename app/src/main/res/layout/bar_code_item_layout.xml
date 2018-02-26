@@ -16,24 +16,28 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:minEms="4"
+                android:layout_weight="1"
                 android:fontFamily="sans-serif"
-                android:text="Item Code:"
+                android:text="Item Name:"
                 android:textColor="@color/colorPrimary"
                 android:textIsSelectable="true"
                 android:textSize="16dp"
                 android:textStyle="normal" />
             <TextView
                 android:id="@+id/item_code"
-                android:layout_width="0dp"
+                android:text="123"
+                android:layout_width="match_parent"
+                android:gravity="end"
+                android:layout_marginRight="10dp"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="10dp"
                 android:fontFamily="sans-serif"
-                android:layout_weight="1.0"
+                android:layout_weight="1.8"
                 android:textColor="@color/colorAccent"
                 android:textIsSelectable="true"
                 android:textSize="14sp" />
@@ -41,14 +45,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:orientation="horizontal">
-
-
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:minEms="4"
+                android:layout_weight="1"
                 android:fontFamily="sans-serif"
                 android:text="Item Name:"
                 android:textColor="@color/colorPrimary"
@@ -58,12 +61,15 @@
 
             <TextView
                 android:id="@+id/item_name"
-                android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="10dp"
                 android:fontFamily="sans-serif"
-                android:layout_weight="1.0"
+                android:text="mobile"
+                android:gravity="end"
+                android:layout_weight="1.8"
                 android:textColor="@color/colorAccent"
                 android:textIsSelectable="true"
                 android:textSize="14sp" />
@@ -73,10 +79,11 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:minEms="4"
+                android:layout_weight="1"
                 android:text="Price :"
                 android:fontFamily="sans-serif"
                 android:textColor="@color/colorPrimary"
@@ -85,12 +92,15 @@
                 android:textStyle="normal" />
             <TextView
                 android:id="@+id/item_price"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:fontFamily="sans-serif"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="10dp"
-                android:layout_weight="1.0"
+                android:gravity="end"
+                android:text="1234"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.8"
                 android:textColor="@color/colorAccent"
                 android:textIsSelectable="true"
                 android:textSize="14sp" />

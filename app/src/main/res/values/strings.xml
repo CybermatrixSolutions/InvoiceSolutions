@@ -2,22 +2,31 @@
     <string name="app_name">GARRUDA</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
-    <string name="profile">My Profile</string>
-    <string name="AboutUs">About Us</string>
-    <string name="Contactus">Contact Us</string>
+    <string name="petroldieselsales">Petrol/Diesel Sales </string>
+    <string name="lubesales">Lube Sales Entry</string>
+    <string name="nozzlereadiing">Nozzle CMR</string>
+    <string name="salessettlement">Shift Settlement</string>
+    <string name="others">Miscellaneous</string>
     <string name="logout">Logout</string>
-    <string name="nav_item_share_app">Share App</string>
-    <string name="nav_item_rate_us">Rate Us</string>
-    <string name="nav_item_help_support">Help and Support</string>
-    <string name="nav_item_logout">Logout</string>
-
-    <string name="shop_online">Shop Online</string>
-
-    <!-- navigation drawer item labels  -->
+    <string name="description">Logout</string>
+    <string name="GARUDA">GARRUDA</string>
     <string-array name="nav_drawer_labels">
-        <item>@string/profile</item>
-        <item>@string/AboutUs</item>
-        <item>@string/Contactus</item>
+        <item>Scan QR Code</item>
+        <item>Without QR Code</item>
+        <item>Walk in Customer</item>
+        <item>Shift Allocation</item>
+        <item>Nozzle CMR</item>
+        <item>Shift Settlement</item>
+        <item>@string/logout</item>
+    </string-array>
+    <string-array name="Model">
+        <item>Select Model</item>
+    </string-array>
+    } ;
+    <string-array name="nav_drawer_labels1">
+        <item>Scan QR Code</item>
+        <item>Without QR Code</item>
+        <item>Walk in Customer</item>
         <item>@string/logout</item>
     </string-array>
 </resources>

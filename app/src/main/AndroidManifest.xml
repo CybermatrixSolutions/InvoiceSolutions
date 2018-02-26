@@ -6,50 +6,189 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/splash"
+        android:icon="@drawable/garuda_logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".activity.MachineNumberActivity" />
         <activity
-            android:name=".activity.DashboardActivity"
+            android:name=".activity.activity.LoginActivity"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name=".activity.CreditCustomerActivity"
-            android:parentActivityName=".activity.DashboardActivity" />
+            android:name=".activity.walkin.BarcodeScanActivity"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activity.activity.DashboardActivity"
+            android:theme="@style/MyMaterialTheme" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="portrait"
             tools:replace="screenOrientation" />
         <activity
-            android:name=".activity.BarcodeScanActivity"
-            android:parentActivityName=".activity.DashboardActivity" />
-        <activity android:name=".activity.PdfActivity" />
+            android:name=".activity.walkin.WalkinCustomerInformationActivity"
+            android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name=".activity.WalkinCustomerInformationActivity"
-            android:parentActivityName=".activity.DashboardActivity" />
-        <activity android:name=".WebViewActivity" />
-        <activity
-            android:name=".activity.ProfileActivity"
-            android:parentActivityName=".activity.DashboardActivity" />
-        <activity
-            android:name=".activity.ForgotPasswordActivity"
-            android:parentActivityName=".LoginActivity" />
-        <activity android:name=".activity.SplashActivity">
+            android:name=".activity.activity.ProfileActivity"
+            android:parentActivityName=".activity.activity.DashboardActivity"
+            android:theme="@style/MyMaterialTheme" />
+        <activity android:name=".activity.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.ChangePasswordActivity" />
-        <activity android:name=".activity.DeviceIdMobileNumberActivity" />
-        <activity android:name=".activity.VerifyMobileNumber"></activity>
+        <activity android:name=".activity.activity.DeviceIdMobileNumberActivity" />
+        <activity
+            android:name=".activity.verify_mobile.VerifyMobileNumberActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.shift_sattlement.ShiftSettlementActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.walkin.NoBarCodeActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.nozzleCmr.EndNozzleReadingActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.WithoutQR.WithoutQrCodeActivityForOil"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.WithoutQR.PetrolCustomerDetailWithoutQrCodeActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.walkin.BarCodeOptionActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.activity.ProductNoBarCodeActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.printing_activity.PrintActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.printing_activity.PrintWithoutQR_For_Fuel"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.printing_activity.PrintLubeActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.verify_mobile.VerifyMobileNumberLubeActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".customer_module.activity.DashboardActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".customer_module.activity.AddFuelRequestActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".customer_module.activity.LubeRequestListActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".customer_module.activity.DriverListActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".customer_module.activity.VehicleListActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".customer_module.activity.FuelRequestListActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".customer_module.activity.AddLubeRequestActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".customer_module.activity.AddDriverActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".customer_module.activity.AddVehicleActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.With_QR.RequestWithQrCode"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.With_QR.Fuel_Lube_List"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.verify_mobile.VerifyMobile"
+            android:theme="@style/MyMaterialTheme" />
+        <activity android:name=".activity.shiftallocation.ShiftAllocation" />
+        <activity
+            android:name=".activity.With_QR.Driver_DashBoard"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.shift_sattlement.ShiftSettleOption"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.shift_sattlement.ShiftSattlementOther"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".lube.NewRequestForLube_WithQR_No_QR"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".lube.NewLubeRequest"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".customer_module.activity.CustomerRO"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".activity.printing_activity.WalkinPrintLubeActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.walkin.WalkinVerifyMobileNumberLubeActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.WithoutQR.Transaction"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+        <activity
+            android:name=".customer_module.activity.CustomerDriver"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+
+        <activity android:name=".Calculation_Activity"></activity>
+
     </application>
 
 </manifest>

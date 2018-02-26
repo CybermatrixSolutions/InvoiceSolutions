@@ -35,9 +35,9 @@ public class BarCodeScanAdapter extends RecyclerView.Adapter<BarCodeScanAdapter.
 
     @Override
     public void onBindViewHolder(QrViewHolder holder, int position) {
-        holder.item_code.setText(qrScanResultList.get(position).getFormate());
+        holder.item_code.setText(qrScanResultList.get(position).getContent());
         holder.item_name.setText(qrScanResultList.get(position).getContent());
-        holder.item_price.setText(qrScanResultList.get(position).getFormate());
+        holder.item_price.setText("Rs. "+qrScanResultList.get(position).getFormate());
     }
 
     @Override
@@ -51,9 +51,9 @@ public class BarCodeScanAdapter extends RecyclerView.Adapter<BarCodeScanAdapter.
 
         public QrViewHolder(View itemView) {
             super(itemView);
-            item_code =itemView.findViewById(R.id.item_code);
-            item_name =itemView.findViewById(R.id.item_name);
-            item_price =itemView.findViewById(R.id.item_price);
+            item_code = itemView.findViewById(R.id.item_code);
+            item_name = itemView.findViewById(R.id.item_name);
+            item_price = itemView.findViewById(R.id.item_price);
         }
     }
 }

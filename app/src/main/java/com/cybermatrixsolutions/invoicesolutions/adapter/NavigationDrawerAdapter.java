@@ -84,9 +84,9 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            title = (TextView) itemView.findViewById(R.id.title);
-            count = (TextView) itemView.findViewById(R.id.count);
-            imageId = (ImageView) itemView.findViewById(R.id.imageView);
+            title = itemView.findViewById(R.id.title);
+            count = itemView.findViewById(R.id.count);
+            imageId = itemView.findViewById(R.id.imageView);
             //myBackground = (LinearLayout)itemView.findViewById(R.id.layout_background);
             //myBackground = (LinearLayout) itemView;
         }

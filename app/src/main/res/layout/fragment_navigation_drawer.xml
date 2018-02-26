@@ -4,20 +4,12 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg"
      >
-
-    <!-- First Layout Start -->
     <RelativeLayout
         android:id="@+id/nav_header_container"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_alignParentTop="true"
-         >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-             android:orientation="horizontal">
-
+        android:clickable="false"
+        android:layout_alignParentTop="true">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -26,32 +18,27 @@
                  android:orientation="vertical"
                 android:gravity="center">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/profile_image"
+                <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:src="@drawable/defaultuser"
-                    app:civ_border_width="2dp"
-                    app:civ_border_color="#fff"/>
+                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dhiraj Pandey"
+                    android:id="@+id/name"
+                    android:textAllCaps="true"
                     android:layout_marginTop="8dp"
                     android:textStyle="bold"
                     android:textColor="@color/white_color" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="pandeydhiraj2013@gmail.com"
                     android:textStyle="normal"
+                    android:id="@+id/email"
                     android:textColor="@color/white_color" />
 
             </LinearLayout>
-
-         </LinearLayout>
-
     </RelativeLayout>
     <!-- First Layout End -->
 
@@ -70,10 +57,4 @@
             android:focusable="true"
              />
     </RelativeLayout>
-    <!-- Second Layout End -->
-
-    <!-- Third Layout Start -->
-    <!-- Third Layout End -->
-
-
 </RelativeLayout>

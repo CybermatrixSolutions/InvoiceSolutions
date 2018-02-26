@@ -7,16 +7,14 @@
     android:orientation="vertical"
     android:background="@color/white_color"
     android:layout_height="match_parent"
-    tools:context="com.cybermatrixsolutions.invoicesolutions.activity.DashboardActivity">
+    tools:context="com.cybermatrixsolutions.invoicesolutions.activity.activity.DashboardActivity">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
-
     <FrameLayout
-        android:id="@+id/frame_layout"
         android:layout_below="@+id/toolbar"
         android:background="@color/layout_bg"
         android:layout_width="match_parent"

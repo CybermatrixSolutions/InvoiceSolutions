@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/bg"
     android:gravity="center"
-    tools:context="com.cybermatrixsolutions.invoicesolutions.activity.DeviceIdMobileNumberActivity">
+    tools:context="com.cybermatrixsolutions.invoicesolutions.activity.activity.DeviceIdMobileNumberActivity">
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="190dp"
@@ -16,21 +16,19 @@
       android:layout_marginTop="25dp"
       android:orientation="vertical">
       <ImageView
+          android:contentDescription="@string/description"
           android:layout_width="140dp"
           android:layout_height="150dp"
-          android:src="@mipmap/splash"
+          android:src="@drawable/garuda_logo"
           android:id="@+id/logo"/>
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_centerVertical="true"
           android:text="Welcome"
           android:id="@+id/welcome"
           android:textColor="@color/white_color"
           android:textSize="25sp"
-          android:textStyle="bold"
-          android:layout_centerHorizontal="true"
-          android:layout_below="@+id/logo"/>
+          android:textStyle="bold"/>
   </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,6 +52,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_weight="1.7"
+        android:contentDescription="@string/description"
         android:padding="2dp"
         android:src="@mipmap/call"
         android:layout_height="match_parent" />
@@ -67,21 +66,23 @@
         android:layout_height="match_parent"
         android:background="@color/white_color"
         android:layout_weight="2.13"/>
+
     <EditText
+        android:id="@+id/et_mobile"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:paddingLeft="20dp"
-        android:fontFamily="sans-serif"
-        android:inputType="number"
         android:layout_weight="0.5"
-        android:hint="Mobile Number"
-        android:textSize="15sp"
         android:background="@android:color/transparent"
-        android:id="@+id/et_mobile"
+        android:fontFamily="sans-serif"
         android:gravity="start|center_vertical"
-        android:textColorHint="@color/white_color"
+        android:hint="Mobile Number"
+        android:inputType="number"
+        android:paddingLeft="20dp"
+
+        android:maxLength="10"
         android:textColor="@color/white_color"
-       />
+        android:textColorHint="@color/white_color"
+        android:textSize="15sp" />
 
 </LinearLayout>
 
@@ -103,7 +104,6 @@
             android:visibility="gone"
             android:id="@+id/verifyOtpLayout"
             android:orientation="vertical">
-
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
@@ -144,6 +144,8 @@
                 android:hint="Enter Pin"
                 android:textSize="15sp"
                 android:id="@+id/et_pin"
+                android:inputType="number"
+                android:maxLength="4"
                 android:gravity="center"
                 android:textColorHint="@color/white_color"
                 android:textColor="@color/white_color"
@@ -155,6 +157,8 @@
                 android:fontFamily="sans-serif"
                 android:hint="Confirm Pin"
                 android:layout_marginTop="10dp"
+                android:inputType="number"
+                android:maxLength="4"
                 android:textSize="15sp"
                 android:id="@+id/et_cnfmpin"
                 android:gravity="center"

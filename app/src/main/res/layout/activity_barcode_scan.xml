@@ -1,144 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="@color/layout_bg"
     android:layout_height="match_parent"
-    tools:context="com.cybermatrixsolutions.invoicesolutions.activity.BarcodeScanActivity">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/main">
-   <android.support.v7.widget.RecyclerView
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:id="@+id/recyclerView"
-       android:layout_above="@+id/Total"/>
-    <View
+    >
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:layout_marginTop="1dp"
-        android:layout_below="@+id/recyclerView"
-        android:background="@color/colorAccent"/>
-    <LinearLayout
+        android:background="@drawable/title"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@mipmap/back"
+            android:id="@+id/back"
+            android:contentDescription="@string/description"
+            android:layout_marginLeft="5dp"
+            android:padding="11dp"
+            android:layout_height="50dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/splash"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="GARRUDA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:id="@+id/Total"
-        android:visibility="invisible"
-        android:layout_above="@+id/scan_button"
-        android:layout_height="95dp">
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/creditCustomerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                     />
+                <LinearLayout
+                        android:id="@+id/Total"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:text="Total"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="sans-serif"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@color/colorAccent"/>
+                    </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
+            android:id="@+id/bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
             android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sub-Total"
-                android:textSize="16sp"
-                android:fontFamily="sans-serif"
-                android:padding="5dp"
-                android:textColor="@color/colorAccent"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:fontFamily="sans-serif"
-                android:id="@+id/sub_total"
-                android:layout_alignParentRight="true"
-                android:textSize="16sp"
+            <Button
+                android:id="@+id/scan_button"
+                android:layout_width="150dp"
+                android:layout_centerVertical="true"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:padding="5dp"
-                android:textColor="@color/colorAccent"
-                />
+                android:background="@drawable/buttonbg"
+                android:text="scan bar-code"
+                android:textColor="@color/text_color" />
 
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="GST"
-                android:fontFamily="sans-serif"
-                android:textSize="16sp"
-                android:padding="5dp"
-                android:textColor="@color/colorAccent"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/gst"
+            <Button
+                android:id="@+id/addLube"
+                android:layout_width="150dp"
+                android:layout_centerVertical="true"
+                android:layout_height="48dp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
                 android:layout_alignParentRight="true"
-                android:textSize="16sp"
-                android:fontFamily="sans-serif"
                 android:layout_marginRight="5dp"
-                android:padding="5dp"
-                android:textColor="@color/colorAccent"
-                />
-
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Total"
-                android:fontFamily="sans-serif"
-                android:textSize="16sp"
-                android:padding="5dp"
-                android:textColor="@color/colorAccent"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/total"
-                android:layout_alignParentRight="true"
-                android:textSize="16sp"
-                android:fontFamily="sans-serif"
-                android:layout_marginRight="5dp"
-                android:padding="5dp"
-                android:textColor="@color/colorAccent"
-                />
-
+                android:background="@drawable/buttonbg"
+                android:text="next"
+                android:textColor="@color/text_color" />
         </RelativeLayout>
 
-    </LinearLayout>
-     <Button
-        android:id="@+id/scan_button"
-        android:layout_width="130dp"
-        android:layout_height="45dp"
-        android:layout_gravity="center"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"
-         android:layout_marginLeft="5dp"
-        android:textColor="@color/text_color"
-         style="@style/Widget.AppCompat.Button.Borderless.Colored"
-         android:background="@drawable/buttonbg"
-         android:text="scan bar-code" />
-    <Button
-        android:id="@+id/generate_invoice"
-        android:layout_width="150dp"
-        android:layout_height="45dp"
-        android:layout_gravity="center"
-         android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"
-        android:visibility="gone"
-        android:textColor="@color/text_color"
-        android:layout_marginRight="5dp"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:background="@drawable/buttonbg"
-        android:layout_centerHorizontal="true"
-        android:text="generate invoice" />
-
-
-</RelativeLayout>
-</RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

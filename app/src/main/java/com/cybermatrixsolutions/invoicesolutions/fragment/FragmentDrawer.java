@@ -29,6 +29,7 @@ import android.widget.TextView;
 import com.cybermatrixsolutions.invoicesolutions.R;
 import com.cybermatrixsolutions.invoicesolutions.adapter.NavigationDrawerAdapter;
 import com.cybermatrixsolutions.invoicesolutions.model.NavDrawerItem;
+import com.cybermatrixsolutions.invoicesolutions.utils.PrefsManager;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -46,6 +47,7 @@ public class FragmentDrawer extends Fragment {
     private NavigationDrawerAdapter adapter;
     private View containerView;
     private static String[] titles = null;
+    private static String[] titles1 = null;
     private static String[] count = null;
     private LinearLayout login_signup;
     private FragmentDrawerListener drawerListener;
@@ -53,28 +55,27 @@ public class FragmentDrawer extends Fragment {
     private TextView login,sign_up;
 
     Integer[] imageId = {
-            R.mipmap.profile,
-            R.mipmap.salesentry,
-            R.mipmap.saleshistory,
+            R.mipmap.petrol,
+            R.mipmap.oil,
+            R.mipmap.nozzle,
+            R.mipmap.shift,
+            R.mipmap.white_wallet,
+            R.mipmap.white_wallet,
             R.mipmap.logout
      };
-
-    /**
-     * Declaration of Variable
-     **/
-    String mUserID;String mFirstName;
-    String mLastName;
-    String mMobile;
-    String mEmailId;
-    String image;
-    boolean status;
+        Integer[] imageId1 = {
+            R.mipmap.petrol,
+            R.mipmap.oil,
+            R.mipmap.nozzle,
+            R.mipmap.logout
+    };
+    TextView name;TextView email;
 
 
     /**
      * Declaration of Shared Preferences
      **/
-    SharedPreferences mPreferences;
-    SharedPreferences sharedPreferences;
+    private PrefsManager prefsManager;
     public FragmentDrawer() {
 
     }
@@ -87,14 +88,29 @@ public class FragmentDrawer extends Fragment {
         List<NavDrawerItem> data = new ArrayList<>();
 
 
-        // preparing navigation drawer items
-        for (int i = 0; i < titles.length; i++) {
-            NavDrawerItem navItem = new NavDrawerItem(titles[i], imageId[i]);
 
-            navItem.setTitle(titles[i]);
-           // navItem.setCount(count[i]);
-            data.add(navItem);
+        PrefsManager manager=new PrefsManager(getActivity());
+
+
+        if(manager.getdisignation().equals("Salesman")){
+            for (int i = 0; i < titles1.length; i++) {
+                NavDrawerItem navItem = new NavDrawerItem(titles1[i], imageId1[i]);
+                navItem.setTitle(titles1[i]);
+                // navItem.setCount(count[i]);
+                data.add(navItem);
+            }
+        }else {
+            for (int i = 0; i < titles.length; i++) {
+                NavDrawerItem navItem = new NavDrawerItem(titles[i], imageId[i]);
+                navItem.setTitle(titles[i]);
+                // navItem.setCount(count[i]);
+                data.add(navItem);
+            }
         }
+
+
+
+
         return data;
     }
 
@@ -103,13 +119,6 @@ public class FragmentDrawer extends Fragment {
         super.onResume();
         adapter = new NavigationDrawerAdapter(getActivity(), getData());
         recyclerView.setAdapter(adapter);
-/*
-        if(status==false){
-           // mProfileLayout.setVisibility(View.GONE);
-            adapter.hideView(7);
-           // adapter.hideView(2);
-        }
-*/
     }
 
     @Override
@@ -123,36 +132,28 @@ public class FragmentDrawer extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // drawer labels
-        titles = getActivity().getResources().getStringArray(R.array.nav_drawer_labels);
-       // count = getActivity().getResources().getStringArray(R.array.nav_drawer_labels);
 
+        titles = getActivity().getResources().getStringArray(R.array.nav_drawer_labels);
+        titles1 = getActivity().getResources().getStringArray(R.array.nav_drawer_labels1);
 
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflating view layout
         View layout = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+        prefsManager=new PrefsManager(getActivity());
+        String Email=prefsManager.getUserDetails().get("email");
+        String Name=prefsManager.getUserDetails().get("Personnel_Name");
+        name= layout.findViewById(R.id.name);
+        email= layout.findViewById(R.id.email);
 
-
-        /** Initialization of Shared Preferences **/
-
-
-      /*  mUserID = mPreferences.getString(Constant.USER_ID, "");
-        mFirstName = mPreferences.getString(Constant.USER_FIRST_NAME, "");
-        mLastName = mPreferences.getString(Constant.USER_LAST_NAME, "");
-        mMobile = sessionManager.getUserInformation().getMobile();
-        mEmailId = sessionManager.getUserInformation().getEmailId();
-        progressBar=(ProgressBar)layout.findViewById(R.id.progressBar);
-        image=user.getFacebookID();
-
-
-        if (!mUserID.equalsIgnoreCase("")) {
-
+        if(Name!=null){
+            name.setText(Name);
         }
-*/
-        recyclerView = (RecyclerView) layout.findViewById(R.id.drawerList);
+        if(Email!=null){
+            email.setText(Email);
+        }
+        recyclerView = layout. findViewById(R.id.drawerList);
             adapter = new NavigationDrawerAdapter(getActivity(), getData());
             recyclerView.setAdapter(adapter);
             recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -162,7 +163,6 @@ public class FragmentDrawer extends Fragment {
                     drawerListener.onDrawerItemSelected(view, position);
                     mDrawerLayout.closeDrawer(containerView);
                 }
-
                 @Override
                 public void onLongClick(View view, int position) {
 
@@ -170,32 +170,8 @@ public class FragmentDrawer extends Fragment {
             }));
 
         adapter.notifyDataSetChanged();
-      //  edit_profile = (ImageView) layout.findViewById(R.id.edit_profile);
-         login = (TextView) layout.findViewById(R.id.login);
-      /*  sign_up = (TextView) layout.findViewById(R.id.signup);
-        nameText = (TextView) layout.findViewById(R.id.txtUsername);
-        mobileText = (TextView) layout.findViewById(R.id.txtUserEmail);
-       */// mUserImage = (CircleImageView) layout.findViewById(R.id.imgAvatar);
-
-        //nameText.setText(mFirstName + " " + mLastName);
-       // nameText.setText(Name);
-         //   mobileText.setText(mEmailId);
-          //  mobileText.setText(Email);
-/*
-        Picasso.with(getActivity())
-                .load(image)
-                .placeholder(R.drawable.image)
-                .resize(64,64)
-                .into(mUserImage);
-*/
-
-        /** Initialization of UI **/
-
-        /** Initailization of addListener **/
-        //addListener();
-
+        login = layout.findViewById(R.id.login);
         showImage();
-
         return layout;
     }
 
@@ -207,17 +183,13 @@ public class FragmentDrawer extends Fragment {
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
                 getActivity().invalidateOptionsMenu();
-                //changeDrawerIconOnDrawerClick(R.mipmap.ic_date);
 
             }
-
             @Override
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
                 getActivity().invalidateOptionsMenu();
-                //changeDrawerIconOnDrawerClick(R.mipmap.ic_back);
             }
-
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
                 super.onDrawerSlide(drawerView, slideOffset);
@@ -232,19 +204,8 @@ public class FragmentDrawer extends Fragment {
                 mDrawerToggle.syncState();
             }
         });
-        //to change default icon to hamburger item initially
-        //changeDrawerIconOnDrawerClick(R.mipmap.ic_back);
-    }
 
-    private void changeDrawerIconOnDrawerClick(int resourceId) {
-        //Drawable icon = ContextCompat.getDrawable(getApplicationContext(), resourceId);
-        Drawable icon = ResourcesCompat.getDrawable(getResources(), resourceId, null);
-        icon.setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
-        //mDrawerToggle.setDrawerIndicatorEnabled(false);
-        // mDrawerToggle.setHomeAsUpIndicator(icon);
-        getActivity().invalidateOptionsMenu();
     }
-
 
     public interface ClickListener {
         void onClick(View view, int position);
@@ -291,63 +252,16 @@ public class FragmentDrawer extends Fragment {
 
         @Override
         public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
-
         }
-
-
     }
-
     public interface FragmentDrawerListener {
         void onDrawerItemSelected(View view, int position);
     }
 
-
     public void showImage() {
         File storagePath = new File(Environment.getExternalStorageDirectory() + "/DOC/profile/docuser.jpg");
         if (storagePath.exists()) {
-            Bitmap myBitmap = BitmapFactory.decodeFile(storagePath.getAbsolutePath());
-
-          //  mUserImage.setImageBitmap(myBitmap);
 
         }
     }
-
-    /******************************************
-     * Here we use addListener() Method
-     **/
-
-/*
-    public void addListener() {
-        sign_up.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getActivity(), RegistrationActivity.class));
-            }
-        });
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getActivity(), LoginActivity.class));
-            }
-        });
-        edit_profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), ProfileActivity.class);
-                getActivity().startActivity(intent);
-            }
-        });
-
-        aboutLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent1 = new Intent(getActivity(), AboutShoppingInCp.class);
-                intent1.putExtra("title", getActivity().getResources().getString(R.string.about_shopping_in_cp));
-                intent1.putExtra("url", "http://www.myconnaughtplace.com/aboutus");
-                getActivity().startActivity(intent1);
-            }
-        });
-    }
-*/
-
 }

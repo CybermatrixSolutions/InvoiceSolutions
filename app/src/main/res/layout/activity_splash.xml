@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:background="@drawable/bg"
     android:layout_height="match_parent"
-    tools:context="com.cybermatrixsolutions.invoicesolutions.activity.SplashActivity">
+    tools:context="com.cybermatrixsolutions.invoicesolutions.activity.activity.SplashActivity">
 
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@mipmap/splash"
+        android:src="@drawable/garuda_logo"
         android:id="@+id/logo"
+        android:contentDescription="@string/description"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
     <TextView
@@ -19,6 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:text="Welcome"
+        android:visibility="gone"
         android:id="@+id/welcome"
         android:textColor="@color/white_color"
         android:textSize="22sp"
@@ -29,6 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
+        android:visibility="gone"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/welcome"
         android:text="Loreunm epsum"
