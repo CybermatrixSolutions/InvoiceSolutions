@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/title"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@mipmap/back"
+            android:id="@+id/back"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:layout_height="50dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/splash"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/GARUDA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:layout_height="38dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:textColor="@color/white_color"
+                    android:gravity="center|start"
+                    android:text="Registration Number"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_height="match_parent">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/vehicle_number"
+                        android:background="#00ffffff"
+                        android:hint="Registration Number"
+                        android:paddingLeft="10dp"
+                        android:textSize="15dp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:layout_height="match_parent"></EditText>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="1"
+
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:layout_height="38dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:gravity="center|start"
+                    android:text="Make"
+                    android:textColor="@color/white_color"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
+                    android:id="@+id/makelinear"
+                    android:clickable="true"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_height="match_parent">
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:id="@+id/make"
+                        android:paddingLeft="10dp"
+                        android:textSize="15dp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:layout_height="match_parent">
+                    </Spinner>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                android:id="@+id/makelinear_Other"
+                android:orientation="horizontal"
+                android:layout_height="38dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    android:layout_weight=".4"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_height="match_parent">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/makeEntry"
+                        android:background="#00ffffff"
+                        android:hint="Enter Make Type"
+                        android:paddingLeft="10dp"
+                        android:textSize="15dp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:layout_height="match_parent">
+
+                    </EditText>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:id="@+id/model_linear"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:layout_height="38dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:gravity="center|start"
+                    android:text="Model"
+                    android:textColor="@color/white_color"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:id="@+id/model"
+                        android:paddingLeft="10dp"
+                        android:textSize="15dp"
+                        android:entries="@array/Model"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:layout_height="match_parent"></Spinner>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:layout_margin="10dp"
+
+              android:visibility="gone"
+                android:id="@+id/model_other_linear"
+                android:orientation="horizontal"
+                android:layout_height="38dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:gravity="center|start"
+                    android:text="Model"
+                    android:textColor="@color/white_color"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_height="match_parent">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/modelEntry"
+                        android:background="#00ffffff"
+                        android:hint="Enter Model Type"
+                        android:paddingLeft="10dp"
+                        android:textSize="15dp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:layout_height="match_parent">
+                    </EditText>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:layout_height="38dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:gravity="center|start"
+                    android:text="Insurance due date"
+                    android:textColor="@color/white_color"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:id="@+id/insurance_due_date"
+                        android:background="#00ffffff"
+                        android:hint="Insurance due date"
+                        android:paddingLeft="10dp"
+                        android:gravity="center|start"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:layout_height="match_parent"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:layout_height="38dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:gravity="center|start"
+                    android:text="PUC Date"
+                    android:textColor="@color/white_color"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:id="@+id/valid_upto"
+                        android:background="#00ffffff"
+                        android:hint="PUC Date"
+                        android:paddingLeft="10dp"
+
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:gravity="center|start"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:layout_height="match_parent"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:layout_height="38dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:gravity="center|start"
+                    android:text="Color"
+                    android:textColor="@color/white_color"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/color"
+                        android:background="#00ffffff"
+                        android:hint="Color"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:layout_height="match_parent"></EditText>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:layout_height="38dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:gravity="center|start"
+                    android:text="Fuel Type"
+                    android:textColor="@color/white_color"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:id="@+id/fueltype"
+                        android:paddingLeft="10dp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:layout_height="match_parent"></Spinner>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:layout_height="38dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:textColor="@color/white_color"
+                    android:gravity="center|start"
+                    android:text="RC Validity"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:id="@+id/rclinear"
+                    android:layout_weight=".6"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:id="@+id/rc"
+                        android:background="#00ffffff"
+                        android:hint="Select Date"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:gravity="center|start"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:layout_height="match_parent"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:layout_height="38dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:textColor="@color/white_color"
+                    android:gravity="center|start"
+                    android:text="Capacity"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_height="match_parent">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/capacity"
+                        android:background="#00ffffff"
+                        android:hint="capacity"
+                        android:paddingLeft="10dp"
+                        android:enabled="false"
+                        android:textColor="@color/black"
+                        android:inputType="numberDecimal"
+                        android:textSize="15dp"
+                        android:maxLength="5"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:layout_height="match_parent"></EditText>
+                </LinearLayout>
+            </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Submit"
+                android:textSize="16sp"
+                android:id="@+id/submit"
+                android:layout_margin="40dp"
+                android:textColor="@color/white_color"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:background="@drawable/buttonbg" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

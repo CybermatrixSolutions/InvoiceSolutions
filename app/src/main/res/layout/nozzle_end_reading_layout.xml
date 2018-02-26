@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+        android:layout_weight="6"
+    android:background="@color/color_gray"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:id="@+id/sno"
+        android:background="#eac200"
+
+
+        android:textStyle="bold"
+        android:textColor="@color/white_color"
+        android:layout_weight=".6"
+        android:padding="3dp"
+        android:textSize="12sp"
+        android:text="S.No."/>
+        <View
+            android:layout_width="1dp"
+            android:background="@color/colorPrimary"
+            android:layout_height="match_parent"></View>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:id="@+id/nozzleNumber"
+
+        android:textColor="@color/text_color"
+        android:layout_weight="1.4"
+        android:padding="3dp"
+        android:textSize="12sp"
+        android:text="458"/>
+        <View
+            android:layout_width="1dp"
+            android:background="@color/colorPrimary"
+            android:layout_height="match_parent"></View>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:id="@+id/startreading"
+
+        android:textColor="@color/text_color"
+        android:layout_weight="1"
+        android:padding="3dp"
+        android:textSize="12sp"
+        android:text="458"/>
+        <View
+            android:layout_width="1dp"
+            android:background="@color/colorPrimary"
+            android:layout_height="match_parent"></View>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="match_parent">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="3dp"
+                android:textSize="12sp"
+
+                android:id="@+id/endReading"
+                android:background="@android:color/transparent"
+                android:textColorHint="@color/text_color"
+                android:textColor="@color/text_color"
+
+                android:inputType="number"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_color"/>
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:background="@color/colorPrimary"
+            android:layout_height="match_parent"></View>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="3dp"
+            android:textSize="12sp"
+            android:id="@+id/test"
+            android:digits="1234567890"
+            android:background="@android:color/transparent"
+            android:textColorHint="@color/text_color"
+            android:textColor="@color/text_color"
+
+            android:layout_weight="1"
+            android:inputType="number"/>
+        <View
+            android:layout_width="1dp"
+            android:background="@color/colorPrimary"
+            android:layout_height="match_parent"></View>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:textSize="12sp"
+            android:id="@+id/reading"
+            android:background="@android:color/transparent"
+            android:textColorHint="@color/text_color"
+            android:textColor="@color/text_color"
+            android:inputType="number"/>
+        <View
+            android:layout_width="1dp"
+            android:background="@color/colorPrimary"
+            android:layout_height="match_parent"></View>
+
+</LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="1dp"></View>
+
+</LinearLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context="com.cybermatrixsolutions.invoicesolutions.activity.shift_sattlement.ShiftSettleOption">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/title"
+
+        android:contentDescription="@string/description"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:contentDescription="@string/description"
+            android:src="@mipmap/back"
+            android:id="@+id/back"
+            android:layout_marginLeft="5dp"
+            android:padding="11dp"
+            android:layout_height="50dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/splash"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="settlement"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/optionlayout"
+        android:layout_height="match_parent">
+
+<TextView
+    android:layout_width="200dp"
+    android:background="@drawable/buttonbg"
+    android:layout_margin="15dp"
+    android:gravity="center"
+    android:textStyle="bold"
+    android:id="@+id/fuel"
+    android:textColor="@color/white_color"
+    android:text="Fuel Shift Settlement"
+    android:layout_height="45dp" />
+        <TextView
+        android:layout_width="200dp"
+        android:gravity="center"
+            android:id="@+id/other"
+        android:textStyle="bold"
+        android:textColor="@color/white_color"
+        android:text="Other Shift Settlement"
+        android:background="@drawable/buttonbg"
+        android:layout_height="45dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:id="@+id/spinner_layout"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:text="Select Time"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white_color"
+                android:layout_height="40dp" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".7"
+                android:weightSum="1"
+                android:clickable="true"
+                android:id="@+id/sales_linear"
+                android:background="@drawable/spinner_bg"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".9"
+                    android:text="Select Shift Time"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:spinnerMode="dialog"
+                    android:id="@+id/sales_text"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight=".1"
+                    android:padding="5dp"
+                    android:src="@drawable/drop_down_arrow"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="150dp"
+            android:gravity="center"
+            android:background="@drawable/buttonbg"
+            android:text="Submit"
+            android:id="@+id/submit"
+            android:textColor="@color/white_color"
+            android:layout_gravity="center"
+            android:layout_margin="40dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+</LinearLayout>

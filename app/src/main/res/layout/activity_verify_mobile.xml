@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/title"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@mipmap/back"
+            android:id="@+id/back"
+            android:contentDescription="@string/description"
+            android:layout_marginLeft="5dp"
+            android:padding="11dp"
+            android:layout_height="50dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/splash"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="GARRUDA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/inoice_layout"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="150dp"
+            android:gravity="center"
+
+            android:text="Print Invoice"
+            android:id="@+id/print_invoice"
+            android:background="@drawable/buttonbg"
+            android:textStyle="bold"
+            android:textColor="@color/white_color"
+            android:layout_gravity="center"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/main_layout"
+        android:background="@color/colorPrimary"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/sendOtp_layout"
+            android:orientation="vertical"
+            android:layout_height="200dp">
+            <EditText
+                android:layout_width="250dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_gravity="center"
+                android:id="@+id/mobile_no_edit"
+                android:inputType="number"
+                android:maxLength="10"
+                android:hint="Mobile No."
+                android:gravity="center"
+                android:layout_height="50dp" />
+            <TextView
+                android:layout_width="150dp"
+                android:gravity="center"
+                android:background="@drawable/buttonbg"
+                android:text="Send OTP"
+                android:id="@+id/send_otp"
+                android:textColor="@color/white_color"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/verifyOtp_layout"
+            android:orientation="vertical"
+            android:layout_height="200dp">
+            <EditText
+                android:layout_width="130dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_gravity="center"
+                android:id="@+id/et_otp"
+                android:inputType="number"
+                android:hint="OTP"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:maxLength="10"
+                android:layout_height="50dp" />
+            <TextView
+                android:layout_width="150dp"
+                android:gravity="center"
+                android:background="@drawable/buttonbg"
+                android:text="Verify OTP"
+                android:id="@+id/verify"
+                android:textColor="@color/white_color"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:layout_width="150dp"
+                android:gravity="center"
+                android:background="@drawable/buttonbg"
+                android:text="Resend OTP"
+                android:id="@+id/resendotp"
+                android:textColor="@color/white_color"
+                android:layout_gravity="center"
+                android:layout_height="40dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

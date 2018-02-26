@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/title"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@mipmap/back"
+            android:id="@+id/back"
+            android:contentDescription="@string/description"
+            android:layout_marginLeft="5dp"
+            android:padding="11dp"
+            android:layout_height="50dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/splash"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="GARRUDA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+    <com.cybermatrixsolutions.invoicesolutions.utils.PulsatorLayout
+        android:id="@+id/pulsator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:gravity="center"
+        app:pulse_color="@color/colorPrimary"
+        app:pulse_count="8"
+        app:pulse_duration="4000"
+        app:pulse_interpolator="Decelerate"
+        app:pulse_repeat="0"
+        app:pulse_startFromScratch="false">
+
+
+        <LinearLayout
+            android:id="@+id/linea1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_above="@+id/locationmarker"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="82dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_toLeftOf="@+id/locationmarker"
+            android:layout_toStartOf="@+id/locationmarker"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".7"
+                android:src="@drawable/smartphone" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight=".3" />
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/locationmarker"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:src="@drawable/phone" />
+
+
+        <LinearLayout
+            android:id="@+id/linea5"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignLeft="@+id/linea1"
+            android:layout_alignStart="@+id/linea1"
+            android:layout_below="@+id/linea1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".7"
+                android:src="@drawable/smartphone" />
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight=".3" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linea6"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignLeft="@+id/linea2"
+            android:layout_alignStart="@+id/linea2"
+            android:layout_below="@+id/linea1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".7"
+                android:src="@drawable/smartphone" />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight=".3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linea2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignTop="@+id/linea1"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_toEndOf="@+id/locationmarker"
+            android:layout_toRightOf="@+id/locationmarker"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".7"
+                android:src="@drawable/smartphone" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight=".3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linea3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignLeft="@+id/linea1"
+            android:layout_alignStart="@+id/linea1"
+            android:layout_below="@+id/locationmarker"
+            android:layout_marginTop="94dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".7"
+                android:src="@drawable/smartphone" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight=".3" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linea4"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignBottom="@+id/linea3"
+            android:layout_alignEnd="@+id/linea2"
+            android:layout_alignRight="@+id/linea2"
+            android:orientation="vertical"
+            android:text="TextView"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".7"
+                android:src="@drawable/smartphone" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight=".3" />
+        </LinearLayout>
+
+
+    </com.cybermatrixsolutions.invoicesolutions.utils.PulsatorLayout>
+
+
+</LinearLayout>

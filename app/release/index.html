@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Install Garruda mobile App</title>
+    <style type="text/css">
+        body
+        {
+            background: url(bkg.png) repeat #f3f3f3;
+            font-family: Helvetica, arial, sans-serif;
+        }
+        .congrats
+        {
+            font-size: 16pt;
+            padding: 6px;
+            text-align: center;
+        }
+        .step
+        {
+            background: white;
+            border: 1px #ccc solid;
+            border-radius: 14px;
+            padding: 4px 10px;
+            margin: 10px 0;
+        }
+        .instructions
+        {
+            font-size: 10pt;
+        }
+        .arrow
+        {
+            font-size: 15pt;
+        }
+        table
+        {
+            width: 100%;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function DetectIphone() {
+            var uagent = navigator.userAgent;
+            //alert(uagent);
+            //alert(navigator.userAgent.match(/Android/i));
+            if (navigator.userAgent.match(/Android/i) == "Android") {
+
+
+                document.getElementById('And').style.display = "block";
+                document.getElementById('IOS').style.display = "none";
+                document.getElementById('WIN').style.display = "none";
+            }
+            if (uagent.search("iPad") > -1) {
+               // alert('2');
+
+                document.getElementById('And').style.display = "none";
+                document.getElementById('IOS').style.display = "block";
+                document.getElementById('WIN').style.display = "none";
+            }
+            if (uagent.search("windows") > -1) {
+
+               // alert('3');
+                document.getElementById('And').style.display = "none";
+                document.getElementById('IOS').style.display = "none";
+                document.getElementById('WIN').style.display = "block";
+            }
+
+        }
+        window.onload = DetectIphone;
+    </script>
+
+</head>
+<body>
+<div class="congrats">        Congrats! <br> Cyber Matrix Solutions Pvt Ltd Invited you to Install The following App.
+</div>
+
+<div id="And" class="step">
+  <table>
+    <tbody>
+      <tr>
+        <td class="instructions">                    Install
+                    <br /><span style="font-size: 12px;">Garruda APP (Android)</span></td>
+        <td width="24" class="arrow">                    &rarr;
+                </td>
+        <td width="57" class="imagelink"> <a href="Garruda1.7.apk"> <img height="70" width="120" src="logo.png" /> </a> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div id="WIN" class="step">
+  <table>
+    <tbody>
+      <tr>
+        <td class="instructions">                   Please open this link from your Andriod Devices.
+                </td>
+        <td width="24" class="arrow">
+                </td>
+        <td width="57" height="57" class="imagelink"><!-- <img height="57" width="57" src="icon.png" />--> </td>
+      </tr>
+    </tbody>
+  </table>
+</div> </body>
+</html>

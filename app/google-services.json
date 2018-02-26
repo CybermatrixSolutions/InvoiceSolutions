@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1015663011856",
+    "firebase_url": "https://garuda-31ef1.firebaseio.com",
+    "project_id": "garuda-31ef1",
+    "storage_bucket": "garuda-31ef1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015663011856:android:c8bddf631f33424f",
+        "android_client_info": {
+          "package_name": "com.cybermatrixsolutions.invoicesolutions"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1015663011856-o083a253jdhdlhvjr8mg5r52tqtoi1u1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cybermatrixsolutions.invoicesolutions",
+            "certificate_hash": "b726bc762164bcbbe72fca71cb2d4097612d8be3"
+          }
+        },
+        {
+          "client_id": "1015663011856-4es56v02egqcn4cv7db7msisbubpk4kn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqGndIUpFOif9-h3vk7f20dvY_Rq3eriM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1015663011856-4es56v02egqcn4cv7db7msisbubpk4kn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

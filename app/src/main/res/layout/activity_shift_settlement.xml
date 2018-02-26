@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/title"
+        android:contentDescription="@string/description"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:contentDescription="@string/description"
+            android:src="@mipmap/back"
+            android:id="@+id/back"
+            android:layout_marginLeft="5dp"
+            android:padding="11dp"
+            android:layout_height="50dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/splash"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="settlement"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:scrollbars="none"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main"
+        android:visibility="invisible"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="6"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+
+                android:textColor="@color/white_color"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                android:padding="3dp"
+                android:text="Noz. Number"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/white_color"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+
+                android:textColor="@color/white_color"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                android:padding="3dp"
+                android:text="OMR"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/white_color"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+
+                android:textColor="@color/white_color"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                android:padding="3dp"
+                android:text="CMR"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/white_color"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+
+                android:textColor="@color/white_color"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                android:padding="3dp"
+                android:text="TEST"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/white_color"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+
+                android:textColor="@color/white_color"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                android:padding="3dp"
+                android:text="Reading"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/white_color"
+                android:layout_height="match_parent"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:padding="3dp"
+                android:id="@+id/startreading"
+                android:layout_weight="1"
+                android:textColor="@color/white_color"
+                android:text="Net Amount"/>
+        </LinearLayout>
+         <android.support.v7.widget.RecyclerView
+            android:id="@+id/oilSettlement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#0f000000"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.55"
+                android:gravity="center_vertical"
+                android:text="Total Nozzle Sales"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical|clip_vertical"
+                android:layout_height="50dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/total_amount"
+                android:gravity="center_vertical|end"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center_vertical|clip_vertical"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#0f000000"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.55"
+                android:gravity="center_vertical"
+                android:text="Credit Sales Others(Walkin)"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical|clip_vertical"
+                android:layout_height="50dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/lubesalesAmount"
+                android:gravity="center_vertical|end"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center_vertical|clip_vertical"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:background="#0f000000"
+                android:visibility="visible"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="Collections"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center"
+                android:layout_height="50dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#0f000000"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.55"
+                android:gravity="center_vertical"
+                android:text="Credit Fuel Sales"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical|clip_vertical"
+                android:layout_height="50dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/oilSalesAmount"
+                android:gravity="center_vertical|end"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center_vertical|clip_vertical"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/payment_recycle"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="2dp"
+            android:textColor="@color/white_color"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:text="Difference"/>
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="15dp"
+            android:gravity="end|center_vertical"
+            android:layout_alignParentRight="true"
+            android:textSize="15sp"
+            android:text="Rs. 0"
+            android:id="@+id/differenceAmount"
+            android:textColorHint="@color/white_color"
+            android:textColor="@color/white_color"
+            android:inputType="numberDecimal"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:text="Verify"
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="sans-serif"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/verify"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/text_color"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:background="@drawable/buttonbg"/>
+
+</LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

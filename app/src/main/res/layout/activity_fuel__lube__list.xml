@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.cybermatrixsolutions.invoicesolutions.activity.With_QR.Fuel_Lube_List">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/title"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@mipmap/back"
+            android:contentDescription="@string/description"
+            android:id="@+id/back"
+            android:layout_marginLeft="5dp"
+            android:padding="11dp"
+            android:layout_height="50dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/splash"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="GARRUDA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/result_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+          >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:padding="3dp"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Company Code :"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"
+                    android:textSize="16dp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/company_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.0"
+                    android:textColor="@color/colorAccent"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Name :"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"
+                    android:textSize="16dp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/customer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.0"
+                    android:textColor="@color/colorAccent"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:padding="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minEms="6"
+                    android:layout_weight="1.5"
+                    android:text="Driver Name :"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"
+                    android:textSize="16dp"
+                    android:textStyle="normal" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:id="@+id/driver_name"
+                        android:enabled="false"
+                        android:layout_centerVertical="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Driver Mobile :"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"
+                    android:textSize="16dp"
+                    android:textStyle="normal" />
+                <TextView
+                    android:id="@+id/driverMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.0"
+                    android:visibility="visible"
+                    android:textColor="@color/colorAccent"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp" />
+                <EditText
+                    android:id="@+id/et_driverMobile1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.0"
+                    android:maxLength="10"
+                    android:inputType="number"
+                    android:enabled="true"
+                    android:visibility="gone"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:padding="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minEms="6"
+                    android:layout_weight="1.5"
+                    android:text="Credit Limit :"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"
+                    android:textSize="16dp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/credit_limit"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorAccent"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:padding="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicle Number :"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"
+                    android:textSize="16dp"
+                    android:textStyle="normal" />
+                <TextView
+                    android:id="@+id/van_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.0"
+                    android:textColor="@color/colorAccent"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/colorAccent"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/customerRequest"
+                android:text="Customer Requests"
+
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:background="@color/layout_bg"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:layout_below="@+id/llSearch"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorAccent"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+
+                app:cardMaxElevation="10dp"
+                android:id="@+id/fuel_cart"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:text="Fuel Request"
+                        android:layout_height="48dp"
+                        android:gravity="center"
+                        android:background="@color/layout_bg"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white_color"
+                        android:layout_below="@+id/llSearch"/>
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/Total" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:id="@+id/new_fuel_request_layout"
+                app:cardMaxElevation="10dp"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Create New Fuel Request"
+                        android:layout_height="48dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:background="@color/colorPrimary"
+                        android:textColor="@color/white_color"
+                        android:layout_below="@+id/llSearch"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:weightSum="1"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight=".7"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="FUEL TYPE"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:backgroundTint="@color/colorPrimaryDark"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:background="#00ffffff"
+                            android:paddingLeft="10dp"
+                            android:text="QTY(LTR.)"
+                            android:textSize="13dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:weightSum="1"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_height="40dp">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight=".7"
+                        android:background="@drawable/edittextbg"
+                        android:layout_height="match_parent">
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:id="@+id/spinner_fueltype"
+                            android:backgroundTint="@color/colorPrimaryDark"
+                            android:layout_height="match_parent"></Spinner>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/edittextbg"
+                        android:layout_height="match_parent">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:background="#00ffffff"
+                            android:id="@+id/et_fuel_"
+                            android:inputType="number"
+                            android:paddingLeft="10dp"
+                            android:layout_height="match_parent">
+                        </EditText>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:gravity="center"
+                        android:background="@drawable/buttonbg"
+                        android:text="Proceed"
+                        android:textColor="@color/white_color"
+                        android:id="@+id/btn_fuel_proceed"
+
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:layout_height="40dp" />
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:id="@+id/lube_request_cart"
+
+                app:cardMaxElevation="10dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:text="Other Request"
+                        android:layout_height="48dp"
+                        android:gravity="center"
+                        android:background="@color/layout_bg"
+                        android:textSize="16sp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textColor="@color/white_color"
+                        android:layout_below="@+id/llSearch"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView1"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/Total" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:layout_height="40dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/total_lube"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_width="100dp"
+                    android:text="PROCEED"
+                    android:id="@+id/lube_proceed"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/white_color"
+                    android:textStyle="bold"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                android:id="@+id/new_lube_request"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:text="Create New Other Request"
+                        android:layout_height="48dp"
+                        android:gravity="center"
+                        android:background="@color/layout_bg"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white_color"
+
+                        />
+                    <TextView
+                        android:layout_width="150dp"
+                        android:gravity="center"
+                        android:background="@drawable/buttonbg"
+                        android:text="Add Lube"
+                        android:id="@+id/add_new_lube"
+                        android:textColor="@color/white_color"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_height="40dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+
+                android:id="@+id/new_lube_select_item"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:weightSum="1"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".4"
+                        android:gravity="center|start"
+                        android:text="Select Item"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/spinner_bg"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:id="@+id/select_item"
+                            android:background="#00ffffff"
+                            android:hint="Items"
+                            android:gravity="center|start"
+                            android:paddingLeft="10dp"
+                            android:textSize="15dp"
+                            android:padding="10dp"
+                            android:layout_height="wrap_content"></TextView>
+                    </LinearLayout>
+                </LinearLayout>
+                    <TextView
+                        android:layout_width="150dp"
+                        android:gravity="center"
+                        android:background="@drawable/buttonbg"
+                        android:text="Proceed"
+                        android:id="@+id/btn_new_lube_proceed"
+                        android:textColor="@color/white_color"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:layout_height="40dp" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

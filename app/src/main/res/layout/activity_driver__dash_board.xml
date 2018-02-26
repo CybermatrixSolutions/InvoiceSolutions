@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar1" />
+
+        <LinearLayout
+            android:layout_below="@+id/toolbar"
+            android:background="@color/layout_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:layout_margin="2.5dp"
+            android:orientation="vertical"
+            android:animateLayoutChanges="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight=".5"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_height="0dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:weightSum="1"
+                    android:id="@+id/fuel_request"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_weight=".5"
+                        android:weightSum="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardMaxElevation="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="2.5dp"
+                        android:layout_marginRight="2.5dp"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+
+                            android:weightSum="1"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:id="@+id/bar_code"
+                                android:layout_weight=".8"
+
+                                android:padding="38dp"
+                              />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_weight=".2"
+                                android:text="QR Code"
+                                android:textAllCaps="true"
+                                android:background="@color/colorPrimary"
+                                android:gravity="center"
+                                android:textColor="@color/white_color"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:layout_height="0dp" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:weightSum="1"
+                    android:id="@+id/lube_request"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_weight=".5"
+                        android:weightSum="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardMaxElevation="10dp"
+                        android:layout_marginLeft="2.5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="2.5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+
+                            android:weightSum="1"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:gravity="center"
+                                android:layout_weight=".8"
+                                android:id="@+id/code"
+
+
+                                android:textSize="25dp"
+                                android:textColor="@color/colorPrimary"
+                                android:textStyle="bold"
+                                android:layout_height="0dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_weight=".2"
+                                android:text="OTP"
+                                android:background="@color/colorPrimary"
+                                android:gravity="center"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white_color"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:layout_height="0dp" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight=".5"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_height="0dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:weightSum="1"
+                    android:id="@+id/manage_driver"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_weight=".5"
+                        android:weightSum="1"
+                        android:visibility="invisible"
+                        app:cardCornerRadius="10dp"
+                        app:cardMaxElevation="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="2.5dp"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:weightSum="1"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:padding="38dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight=".8"
+                                android:src="@drawable/driver"
+                                android:layout_height="0dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_weight=".2"
+                                android:text="Manage Driver"
+                                android:background="@color/colorPrimary"
+                                android:gravity="center"
+                                android:textColor="@color/white_color"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textAllCaps="true"
+                                android:layout_height="0dp" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:weightSum="1"
+                    android:id="@+id/manage_vehicle"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_weight=".5"
+                        android:weightSum="1"
+                        android:visibility="invisible"
+                        app:cardCornerRadius="10dp"
+                        app:cardMaxElevation="10dp"
+                        android:layout_marginLeft="2.5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+
+                            android:weightSum="1"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight=".8"
+                                android:padding="38dp"
+                                android:src="@drawable/car" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_weight=".2"
+                                android:text="Manage Vehicle"
+                                android:background="@color/colorPrimary"
+                                android:gravity="center"
+                                android:textColor="@color/white_color"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textAllCaps="true"
+                                android:layout_height="0dp" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,227 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/title"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@mipmap/back"
+            android:id="@+id/back"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:layout_height="50dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="60dp"
+
+
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/splash"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/GARUDA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            android:layout_height="38dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:textColor="@color/white_color"
+                android:gravity="center|start"
+                android:text="Vehicle Reg No."
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:background="@drawable/spinner_bg"
+                android:layout_height="match_parent">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:id="@+id/vehicle_reg_no"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_height="match_parent"></Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:visibility="gone"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_height="38dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:gravity="center|start"
+                android:text="Fuel Type"
+                android:textColor="@color/white_color"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:background="@drawable/spinner_bg"
+                android:layout_height="match_parent">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:id="@+id/fuel_type"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_height="match_parent"></Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_height="38dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:gravity="center|start"
+                android:text="Request Type"
+                android:textColor="@color/white_color"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:background="@drawable/spinner_bg"
+                android:layout_height="match_parent">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:id="@+id/request_type"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_height="match_parent">
+
+                </Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:id="@+id/request_value_layout"
+            android:orientation="horizontal"
+            android:layout_height="35dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:textColor="@color/white_color"
+                android:gravity="center|start"
+                android:text="Request Value"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:background="@drawable/spinner_bg"
+                android:layout_height="match_parent">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/request_value"
+                    android:background="#00ffffff"
+                    android:hint="Request Value"
+                    android:textSize="15dp"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:paddingLeft="10dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_height="match_parent"></EditText>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_height="35dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:textColor="@color/white_color"
+                android:gravity="center|start"
+                android:text="Driver Mobile No."
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:background="@drawable/spinner_bg"
+                android:layout_height="match_parent">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/driver_mobile"
+                    android:background="#00ffffff"
+                    android:hint="Driver mobile"
+                    android:textSize="15dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_height="match_parent"></EditText>
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="Submit"
+            android:textSize="16sp"
+            android:id="@+id/submitbutton"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:textStyle="bold"
+            android:textColor="@color/white_color"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:background="@drawable/buttonbg" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/title"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@mipmap/back"
+            android:id="@+id/back"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:layout_height="50dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/splash"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/GARUDA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_height="38dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:textColor="@color/white_color"
+                android:gravity="center|start"
+                android:text="Vehicle Reg No"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:background="@drawable/spinner_bg"
+                android:layout_height="match_parent">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:id="@+id/vehicle_reg_no"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_height="match_parent"></Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:gravity="center|start"
+                android:text="Select Item"
+                android:textColor="@color/white_color"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:background="@drawable/spinner_bg"
+                android:layout_height="match_parent">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/select_item"
+                    android:background="#00ffffff"
+                    android:hint="Items"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:textSize="15dp"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_height="wrap_content"></AutoCompleteTextView>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:gravity="center|start"
+                android:text="Quantity"
+                android:textColor="@color/white_color"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:background="@drawable/spinner_bg"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/qty"
+                    android:background="#00ffffff"
+                    android:hint="qty"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:textSize="15dp"
+                    android:maxLength="4"
+                    android:inputType="number"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_height="wrap_content"></EditText>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_height="35dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:textColor="@color/white_color"
+                android:gravity="center|start"
+                android:text="Driver Mobile No."
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:background="@drawable/spinner_bg"
+                android:layout_height="match_parent">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/driver_mobile"
+                    android:background="#00ffffff"
+                    android:hint="Driver mobile"
+                    android:textSize="15dp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:paddingLeft="10dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_height="match_parent"></EditText>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="ADD"
+            android:textSize="16sp"
+            android:layout_marginRight="5dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:id="@+id/add"
+            android:textColor="@color/white_color"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:background="@drawable/buttonbg" />
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="Submit"
+                android:textSize="16sp"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:id="@+id/submit"
+                android:textColor="@color/white_color"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:background="@drawable/buttonbg" />
+        </LinearLayout>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/list_item"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp" />
+
+    </LinearLayout>
+</LinearLayout>
